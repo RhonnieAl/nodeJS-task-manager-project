@@ -1,3 +1,6 @@
+// Initiate connection to DB (This is temporary)
+require("./db/connect");
+
 const express = require("express");
 const getTasks = require("./controllers/tasks");
 const app = express();
@@ -7,7 +10,6 @@ const port = 3100;
 // Import router
 const taskRouter = require("./routes/tasks");
 // Import all controllers
-//const { getTasks } = require("./controllers/task");
 
 /* Middleware */
 

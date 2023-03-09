@@ -17,3 +17,9 @@ Use the following endpoints to perform all CRUD operations (create, read, update
 `/api/v1/tasks/:id` - update tasks (PATCH)
 
 `/api/v1/tasks/:id` - delete tasks (DELETE)
+
+### Database
+
+Database used is MongoDB with Atlas. Mongoose library is used to set up database collections and document structure.
+
+DB URL strings located in Environment variables.
