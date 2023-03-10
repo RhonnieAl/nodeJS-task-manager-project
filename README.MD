@@ -22,4 +22,4 @@ Use the following endpoints to perform all CRUD operations (create, read, update
 
 Database used is MongoDB with Atlas. Mongoose library is used to set up database collections and document structure.
 
-DB URL strings located in Environment variables.
+DB URI strings located in Environment variables.
