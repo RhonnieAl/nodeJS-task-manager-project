@@ -1,21 +1,16 @@
 // Import mongoose and connect app to MongoDB
 const mongoose = require("mongoose");
 
-// Temporarily plcaed the connection string and password in a separate file and .gitignored it.
-const connectionString = require("./connection-string");
-
-// Returns a promise, so we .then().catch()
-// to remove the 15 hundred deprecation warnings from mongoose V6 and under, add the {use... key value pairs}
-mongoose
-  .connect(connectionString, {
+// DB connection function (promise), to be run in app.js
+// So as to start server only after successful DB connection and not the other way round.
+const connectDB = (url) => {
+  mongoose.connect(url, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
     useUnifiedTopology: true,
-  })
-  .then(() => {
-    console.log("YAY! Connection to DB was successful");
-  })
-  .catch((error) => {
-    console.log(error);
   });
+  console.log("YAY! Connection to DB was successful");
+};
+
+module.exports = connectDB;
