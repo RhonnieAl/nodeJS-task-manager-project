@@ -1,13 +1,17 @@
 {
   "name": "jobs",
   "version": "1.0.0",
-  "description": "RhonnieAl",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Node",
+    "NodeJS app",
+    "Project "
+  ],
+  "author": "RhonnieAl",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.6.0",
