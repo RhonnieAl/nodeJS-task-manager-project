@@ -34,6 +34,21 @@ Validation on this node app is handled on the backend with [Mongoose Validation]
 
 Accepted values: `name` , `completed`.
 
-Empty strings throw an error, maxstrin glength is set to 20 characters. Non-bool entries spit out an error as well. All other key:value pairs, ignored.
+Empty strings throw an error, max string length is set to 20 characters. Non-bool entries spit out an error as well. All other key:value pairs, ignored.
 
-A Task's default state is "Not completed"
+```js
+  name: {
+    type: String,
+    required: [true, "Please add a name for the task"],
+    trim: true,
+    maxlength: [20, "Name cannot be more than 20 characters"],
+  },
+  completed: {
+    type: Boolean,
+    default: false,
+  }
+```
+
+A Task's default state is "Not completed".
+
+###
