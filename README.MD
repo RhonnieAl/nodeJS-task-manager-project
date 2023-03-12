@@ -2,6 +2,18 @@
 
 A NodeJS app in Express, that allows you to schedule To-Do tasks and mark them as done. Add tasks, edit them, and delete them.
 
+To add a new Task simply start typing and and click "Submit"
+
+Completed Tasks are crossed-out, incomplete tasks remain.
+
+To edit a Tasks, click the "green edit" icon, rename the task or mark it as done and submit. And click "Back to Tasks" button.
+
+To delete a Task, clcik the "trash" icon.
+
+![Node Task Manager App](https://github.com/RhonnieAl/nodeJS-task-manager-project/blob/master/screenshots/screenshot1.png)
+
+![Edit Feature](https://github.com/RhonnieAl/nodeJS-task-manager-project/blob/master/screenshots/screenshot2.png)
+
 ## Project Setup
 
 In order to run the project, setup .env and set MONGO_URI variable equal to DB connection string.
@@ -34,14 +46,14 @@ Validation on this node app is handled on the backend with [Mongoose Validation]
 
 Accepted values: `name` , `completed`.
 
-Empty strings throw an error, max string length is set to 20 characters. Non-bool entries spit out an error as well. All other key:value pairs, ignored.
+Empty strings throw an error, max string length is set to 30 characters. Non-bool entries spit out an error as well. All other key:value pairs, ignored.
 
 ```js
   name: {
     type: String,
     required: [true, "Please add a name for the task"],
     trim: true,
-    maxlength: [20, "Name cannot be more than 20 characters"],
+    maxlength: [30, "Name cannot be more than 20 characters"],
   },
   completed: {
     type: Boolean,
@@ -50,5 +62,3 @@ Empty strings throw an error, max string length is set to 20 characters. Non-boo
 ```
 
 A Task's default state is "Not completed".
-
-###
