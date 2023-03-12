@@ -9,6 +9,8 @@ const connectDB = require("./db/connect");
 // This package loads environment variables from a .env file into process.env
 require("dotenv").config();
 
+const notFound = require("./middleware/not-found");
+
 // Set the port server will listen to
 const port = 3100;
 // Import router
@@ -25,6 +27,9 @@ app.use(express.json());
 
 // Set up the endpoints
 app.use("/api/v1/tasks", taskRouter);
+
+// Middleware: server 404 Not Found error
+app.use(notFound);
 
 // create function "start" to initiate DB connection and kickstart server
 // Insert DB connection string as an arg form .env file
