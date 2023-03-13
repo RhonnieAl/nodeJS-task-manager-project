@@ -12,7 +12,9 @@ require("dotenv").config();
 const notFound = require("./middleware/not-found");
 
 // Set the port server will listen to
-const port = 3100;
+// Add Port variable for deployment "process.env.PORT", if no variable revert to 3100
+const port = process.env.PORT || 3100;
+
 // Import router
 const taskRouter = require("./routes/tasks");
 // Import all controllers
