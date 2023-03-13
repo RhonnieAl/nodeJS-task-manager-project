@@ -10,9 +10,9 @@ To edit a Tasks, click the "green edit" icon, rename the task or mark it as done
 
 To delete a Task, clcik the "trash" icon.
 
-![Node Task Manager App](https://github.com/RhonnieAl/nodeJS-task-manager-project/blob/master/screenshots/screenshot1.png)
+![NOde-Task-Manager-App](https://github.com/RhonnieAl/nodeJS-task-manager-project/blob/master/screenshots/Screenshot1.png)
 
-![Edit Feature](https://github.com/RhonnieAl/nodeJS-task-manager-project/blob/master/screenshots/screenshot2.png)
+![Edit-Feature](https://github.com/RhonnieAl/nodeJS-task-manager-project/blob/master/screenshots/Screenshot2.png)
 
 ## Project Setup
 
