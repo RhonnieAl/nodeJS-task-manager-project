@@ -2,7 +2,7 @@
 
 A NodeJS app in Express, that allows you to schedule To-Do tasks and mark them as done. Add tasks, edit them, and delete them.
 
-- ALl actions are API requests to the Backend NodeJS controller that update MongoDB cloud database.
+- All actions are API requests to the Backend NodeJS controller that update MongoDB cloud database.
 
 To see the controller functions see the file located in: `/nodeJS-task-manager-project/controllers/tasks.js`
 
