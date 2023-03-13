@@ -53,7 +53,7 @@ Empty strings throw an error, max string length is set to 30 characters. Non-boo
     type: String,
     required: [true, "Please add a name for the task"],
     trim: true,
-    maxlength: [30, "Name cannot be more than 20 characters"],
+    maxlength: [30, "Name cannot be more than 30 characters"],
   },
   completed: {
     type: Boolean,
