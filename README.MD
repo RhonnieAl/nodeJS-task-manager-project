@@ -1,16 +1,26 @@
 ## Task Manager App
 
-A NodeJS app in Express, that allows you to schedule To-Do tasks and mark them as done. Add tasks, edit them, and delete them.
+A NodeJS app in Express, that allows you to schedule To-Do tasks and mark them
+as done. Add tasks, edit them, and delete them.
 
-- All actions are API requests to the Backend NodeJS controller that update MongoDB cloud database.
+All actions are API requests to the Backend NodeJS controller that update a
+MongoDB database.
 
-To see the controller functions see the file located in: `/nodeJS-task-manager-project/controllers/tasks.js`
+## Try it now online
 
-To add a new Task simply start typing and and click "Submit"
+To try the web application, please visit the following URL to start managing
+your tasks:
+
+- https://task-manger-ztl9.onrender.com/
+
+Kindly allow for 30 sec for database Rehydration and loading in some cases.
+
+Add a new Task by simply start typing and and click "Submit"
 
 Completed Tasks are crossed-out, incomplete tasks remain.
 
-To edit a Tasks, click the "green edit" icon, rename the task or mark it as done and submit. And click "Back to Tasks" button.
+To edit a Tasks, click the "green edit" icon, rename the task or mark it as done
+and submit. Then click "Back to Tasks" button.
 
 To delete a Task, clcik the "trash" icon.
 
@@ -18,13 +28,43 @@ To delete a Task, clcik the "trash" icon.
 
 ![Edit-Feature](https://github.com/RhonnieAl/nodeJS-task-manager-project/blob/master/screenshots/Screenshot2.png)
 
+To see the controller functions see the file located in:
+`/nodeJS-task-manager-project/controllers/tasks.js`
+
+# Running Locally: Prerequisites
+
+Please make sure you have `Node.js` installed on your machine and `Git` version
+control system to run project locally.
+
+## Cloning the Repository
+
+To clone this repository to your local machine, `cd` to your desired directory
+(e.g `cd Desktop`).
+
+Then run the following git clone command. This will create a folder called
+`nodeJS-task-manager-project` on your specified directory.
+
+```sh
+git clone https://github.com/RhonnieAl/nodeJS-task-manager-project
+```
+
 ## Project Setup
 
-In order to run the project, setup .env and set MONGO_URI variable equal to DB connection string.
+Run `npm install` to install node dependencies
 
-In order to avoid port collisions, in the source code port value is 3100.
+Run `npm start` or `node app.js`to kickstart server.
+
+In order to run the project, create a .env file, set your "MONGO_URI" with a
+correct "connection string" to your MongoDB.
+
+In order to avoid port collisions, port 3100 is used, feel free to change it.
+
+Great :) Happy testing!
 
 ## REST API endpoints
+
+Test the APIs with [Postman](https://www.postman.com/product/what-is-postman/)
+by pointing to the followwing endpoints.
 
 `/api/v1/tasks` - get all the tasks (GET)
 
@@ -36,21 +76,27 @@ In order to avoid port collisions, in the source code port value is 3100.
 
 `/api/v1/tasks/:id` - delete tasks (DELETE)
 
-### Database
+### MongoDB Database
 
-Data is not stored in browser, "Tasks" are stored in a Database using MongoDB with Atlas.
+Data is not stored in browser, "Tasks" are stored in a Database using MongoDB
+with Atlas.
 
-Mongoose is used to set up database collections and document structure and perform CRUD operations (create, read, update & destroy).
+Mongoose is used to set up database collections and document structure and
+perform CRUD operations (create, read, update & destroy).
 
 ### Basic validation
 
 Create Validation:
 
-Validation on this node app is handled on the backend with [Mongoose Validation](https://mongoosejs.com/docs/validation.html)
+Validation on this node app is handled on the backend with
+[Mongoose Validation](https://mongoosejs.com/docs/validation.html)
 
 Accepted values: `name` , `completed`.
 
-Empty strings throw an error, max string length is set to 30 characters. Non-bool entries spit out an error as well. All other key:value pairs, ignored.
+Empty strings throw an error, max string length is set to 30 characters.
+Non-bool entries spit out an error as well. All other key:value pairs, ignored.
+
+A Task's default state is "Not completed".
 
 ```js
   name: {
@@ -65,4 +111,4 @@ Empty strings throw an error, max string length is set to 30 characters. Non-boo
   }
 ```
 
-A Task's default state is "Not completed".
+Hobby Project maintined by [Rhonnie Allan](https://github.com/RhonnieAl)
