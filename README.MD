@@ -11,7 +11,7 @@ MongoDB database.
 To try the web application, please visit the following URL to start managing
 your tasks:
 
-- https://task-manger-ztl9.onrender.com/
+- https://node-task-manager.azurewebsites.net
 
 Kindly allow for 30 sec for database Rehydration and loading in some cases.
 
